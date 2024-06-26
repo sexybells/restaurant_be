@@ -59,7 +59,6 @@ const register  = async (req, res) => {
         const validate = await signupSchema.validate(req.body)
         if (validate) {
         const { username, password } = req.body;
-        console.log(req.body)
         const hashedPassword = await bcrypt.hash(password, 10);
         const newUser = new User({ username, password: hashedPassword });
         await newUser.save();
