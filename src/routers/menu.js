@@ -6,3 +6,5 @@ router.post('/create', upload.single('image'), createMenu);
 router.post('/update/:id', upload.single('image'), menuUpdate)
 router.post('/delete/:id', menuDelete)
 router.get('/', menuList)
+
+module.exports = router;
