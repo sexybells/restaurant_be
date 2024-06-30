@@ -1,4 +1,4 @@
-const Restaurant = require('../models/Restaurant');
+const Restaurant = require('../../models/restaurants');
 const updateRestaurantInfo = async (req, res) => {
     const { name, address, openTime, closeTime, description } = req.body;
   

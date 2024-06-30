@@ -1,4 +1,6 @@
 const multer = require('multer');
+const storage = multer.memoryStorage();
+
 const upload = multer({ storage: storage });
 const router = require("express").Router();
 const {createMenu, menuList, menuUpdate, menuDelete} = require('../components/Menu')

@@ -1,4 +1,4 @@
-const router = express.Router();
+const router = require("express").Router();
 const multer = require('multer');
 
 const {getRestaurantInfo, updateRestaurantInfo} = require('../components/setup_restaurant')
