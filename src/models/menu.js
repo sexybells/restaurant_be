@@ -26,6 +26,9 @@ const MenuSchema = new mongoose.Schema({
     data: Buffer,
     contentType: String,
   },
+  status: {
+    type: Number
+  }
 });
 
 module.exports = mongoose.model("Menu", MenuSchema);

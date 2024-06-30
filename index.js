@@ -7,4 +7,4 @@ app.use(morgan("combined"));
 app.use(bodyParser.json());
 app.use(Router)
 // connectToDB();
-app.listen(3000)
+app.listen(5000)

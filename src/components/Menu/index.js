@@ -1,7 +1,7 @@
 const menu = require("../../models/menu");
 
 const createMenu = async (req, res) => {
-  const { dish_code, name, category, description, unit, price, discount } =
+  const { dish_code, name, category, description, unit, price, discount, status } =
     req.body;
 
   const newMenu = new menu({
@@ -16,6 +16,7 @@ const createMenu = async (req, res) => {
       data: req.file.buffer,
       contentType: req.file.mimetype,
     },
+    status
   });
 
   try {
@@ -45,7 +46,7 @@ const menuDelete = async (req, res) => {
 }
 
 const menuUpdate = async (req, res) => {
-  const { code, name, category, description, unit, price, discount } = req.body;
+  const { code, name, category, description, unit, price, discount, status } = req.body;
 
   const updateData = {
     code,
@@ -54,7 +55,8 @@ const menuUpdate = async (req, res) => {
     description,
     unit,
     price,
-    discount
+    discount,
+    status
   };
 
   if (req.file) {
